@@ -15,18 +15,14 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView.separated(
           separatorBuilder: (context, index) {
-            return Container(
+            return Divider(
               height: 50,
-              color: Colors.white,
+              color: Colors.black,
             );
           },
           itemCount: myColor.length,
           itemBuilder: (context, index) {
-            return Container(
-              height: 300,
-              width: 300,
-              color: myColor[index],
-            );
+            return Text("Melida Sari 2201082008 TK 2 A");
           },
         ),
       ),
