@@ -15,58 +15,95 @@ class MyApp extends StatelessWidget {
         body: ListView(
           children: [
             ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               title: Text("Melida Sari"),
-              subtitle: Text("2201082008 TK 2 A"),
+              subtitle: Text(
+                "2201082008 TK 2 A Mata Kuliah Pemograman Mobile Lanjut (FLUTTER)",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
               leading: CircleAvatar(),
               trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.blueGrey,
+              // tileColor: Colors.purple,
+              // dense: true,
             ),
             ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               title: Text("Melida Sari"),
-              subtitle: Text("2201082008 TK 2 A"),
+              subtitle: Text(
+                "2201082008 TK 2 A Mata Kuliah Pemograman Mobile Lanjut (FLUTTER)",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
               leading: CircleAvatar(),
               trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.blueGrey,
+              // tileColor: Colors.purple,
+              // dense: true,
             ),
             ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               title: Text("Melida Sari"),
-              subtitle: Text("2201082008 TK 2 A"),
+              subtitle: Text(
+                "2201082008 TK 2 A Mata Kuliah Pemograman Mobile Lanjut (FLUTTER)",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
               leading: CircleAvatar(),
               trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.blueGrey,
+              // tileColor: Colors.purple,
+              // dense: true,
             ),
             ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               title: Text("Melida Sari"),
-              subtitle: Text("2201082008 TK 2 A"),
+              subtitle: Text(
+                "2201082008 TK 2 A Mata Kuliah Pemograman Mobile Lanjut (FLUTTER)",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
               leading: CircleAvatar(),
               trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.blueGrey,
+              // tileColor: Colors.purple,
+              // dense: true,
             ),
             ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               title: Text("Melida Sari"),
-              subtitle: Text("2201082008 TK 2 A"),
+              subtitle: Text(
+                "2201082008 TK 2 A Mata Kuliah Pemograman Mobile Lanjut (FLUTTER)",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
               leading: CircleAvatar(),
               trailing: Text("10:00 PM"),
-            ),
-            Divider(
-              color: Colors.blueGrey,
+              // tileColor: Colors.purple,
+              // dense: true,
             ),
             ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
               title: Text("Melida Sari"),
-              subtitle: Text("2201082008 TK 2 A"),
+              subtitle: Text(
+                "2201082008 TK 2 A Mata Kuliah Pemograman Mobile Lanjut (FLUTTER)",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
               leading: CircleAvatar(),
               trailing: Text("10:00 PM"),
+              // tileColor: Colors.purple,
+              // dense: true,
             ),
-            Divider(
-              color: Colors.blueGrey,
+            ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+              title: Text("Melida Sari"),
+              subtitle: Text(
+                "2201082008 TK 2 A Mata Kuliah Pemograman Mobile Lanjut (FLUTTER)",
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              leading: CircleAvatar(),
+              trailing: Text("10:00 PM"),
+              // tileColor: Colors.purple,
+              // dense: true,
             ),
           ],
         ),
