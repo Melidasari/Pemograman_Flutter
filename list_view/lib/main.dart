@@ -6,6 +6,16 @@ void main() {
 
 class MyApp extends StatelessWidget {
   List<Color> myColor = [Colors.red, Colors.yellow, Colors.green, Colors.grey];
+
+  final List<Widget> mylist = List.generate(
+    100,
+    (index) => Text(
+      "${index + 1}",
+      style: TextStyle(
+        fontSize: 30 + double.parse(index.toString()),
+      ),
+    ),
+  );
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,17 +23,8 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("List View"),
         ),
-        body: ListView.separated(
-          separatorBuilder: (context, index) {
-            return Divider(
-              height: 50,
-              color: Colors.black,
-            );
-          },
-          itemCount: myColor.length,
-          itemBuilder: (context, index) {
-            return Text("Melida Sari 2201082008 TK 2 A");
-          },
+        body: ListView(
+          children: mylist,
         ),
       ),
     );
