@@ -20,6 +20,54 @@ class MyApp extends StatelessWidget {
               leading: CircleAvatar(),
               trailing: Text("10:00 PM"),
             ),
+            Divider(
+              color: Colors.blueGrey,
+            ),
+            ListTile(
+              title: Text("Melida Sari"),
+              subtitle: Text("2201082008 TK 2 A"),
+              leading: CircleAvatar(),
+              trailing: Text("10:00 PM"),
+            ),
+            Divider(
+              color: Colors.blueGrey,
+            ),
+            ListTile(
+              title: Text("Melida Sari"),
+              subtitle: Text("2201082008 TK 2 A"),
+              leading: CircleAvatar(),
+              trailing: Text("10:00 PM"),
+            ),
+            Divider(
+              color: Colors.blueGrey,
+            ),
+            ListTile(
+              title: Text("Melida Sari"),
+              subtitle: Text("2201082008 TK 2 A"),
+              leading: CircleAvatar(),
+              trailing: Text("10:00 PM"),
+            ),
+            Divider(
+              color: Colors.blueGrey,
+            ),
+            ListTile(
+              title: Text("Melida Sari"),
+              subtitle: Text("2201082008 TK 2 A"),
+              leading: CircleAvatar(),
+              trailing: Text("10:00 PM"),
+            ),
+            Divider(
+              color: Colors.blueGrey,
+            ),
+            ListTile(
+              title: Text("Melida Sari"),
+              subtitle: Text("2201082008 TK 2 A"),
+              leading: CircleAvatar(),
+              trailing: Text("10:00 PM"),
+            ),
+            Divider(
+              color: Colors.blueGrey,
+            ),
           ],
         ),
       ),
