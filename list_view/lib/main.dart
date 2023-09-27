@@ -5,6 +5,28 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  List<Widget> myList = [
+    Container(
+      height: 300,
+      width: 300,
+      color: Colors.blueGrey,
+    ),
+    Container(
+      height: 300,
+      width: 300,
+      color: Colors.lightGreen,
+    ),
+    Container(
+      height: 300,
+      width: 300,
+      color: Colors.red,
+    ),
+    Container(
+      height: 300,
+      width: 300,
+      color: Colors.yellow,
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,28 +35,8 @@ class MyApp extends StatelessWidget {
           title: Text("List View"),
         ),
         body: ListView(
-          children: [
-            Container(
-              height: 250,
-              width: 250,
-              color: Colors.blueGrey,
-            ),
-            Container(
-              height: 250,
-              width: 250,
-              color: Colors.lightGreen,
-            ),
-            Container(
-              height: 250,
-              width: 250,
-              color: Colors.red,
-            ),
-            Container(
-              height: 250,
-              width: 250,
-              color: Colors.yellow,
-            ),
-          ],
+          // scrollDirection: Axis.horizontal,
+          children: myList,
         ),
       ),
     );
