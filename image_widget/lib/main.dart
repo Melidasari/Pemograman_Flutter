@@ -19,8 +19,7 @@ class MyApp extends StatelessWidget {
             color: Colors.black,
             child: Image(
               fit: BoxFit.contain,
-              image: AssetImage("images/foto1.jpg"),
-              //image: NetworkImage("https://picsum.photos/200"),
+              image: NetworkImage("https://picsum.photos/200"),
             ),
           ),
         ),
