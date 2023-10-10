@@ -14,45 +14,30 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Melida Sari"),
-              subtitle: Text("2201082008"),
-              trailing: Text("09.00 PM"),
-            ),
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Melida Sari"),
-              subtitle: Text("2201082008"),
-              trailing: Text("09.00 PM"),
-            ),
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Name"),
-              subtitle: Text("Subtitle"),
-              trailing: Text("09.00 PM"),
-            ),
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Melida Sari"),
-              subtitle: Text("2201082008"),
-              trailing: Text("09.00 PM"),
-            ),
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Name"),
-              subtitle: Text("Subtitle"),
-              trailing: Text("09.00 PM"),
-            ),
-            ListTile(
-              leading: CircleAvatar(),
-              title: Text("Melida Sari"),
-              subtitle: Text("2201082008"),
-              trailing: Text("09.00 PM"),
-            ),
+            ChatItem(),
+            ChatItem(),
+            ChatItem(),
+            ChatItem(),
+            ChatItem(),
           ],
         ),
       ),
+    );
+  }
+}
+
+class ChatItem extends StatelessWidget {
+  const ChatItem({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: CircleAvatar(),
+      title: Text("Melida Sari"),
+      subtitle: Text("2201082008"),
+      trailing: Text("09.00 PM"),
     );
   }
 }
