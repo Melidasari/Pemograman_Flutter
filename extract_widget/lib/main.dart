@@ -1,3 +1,4 @@
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -5,6 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  var faker = new Faker();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,11 +16,11 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: [
-            ChatItem(),
-            ChatItem(),
-            ChatItem(),
-            ChatItem(),
-            ChatItem(),
+            ChatItem(
+              imageUrl: "https://picsum.photos/id/1/200/300",
+              title: "Melida Sari",
+              subtitle: "2201082008",
+            ),
           ],
         ),
       ),
@@ -27,16 +29,19 @@ class MyApp extends StatelessWidget {
 }
 
 class ChatItem extends StatelessWidget {
-  const ChatItem({
-    super.key,
-  });
+  final String imageUrl;
+  final String title;
+  final String subtitle;
+  ChatItem({this.imageUrl, this.title, this.subtitle});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(),
-      title: Text("Melida Sari"),
-      subtitle: Text("2201082008"),
+      leading: CircleAvatar(
+        backgroundImage: NetworkImage(imageUrl),
+      ),
+      title: Text(title),
+      subtitle: Text(subtitle),
       trailing: Text("09.00 PM"),
     );
   }
