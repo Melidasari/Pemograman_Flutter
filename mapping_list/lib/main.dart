@@ -9,17 +9,17 @@ class MyApp extends StatelessWidget {
     {
       "Name": "Melida Sari",
       "Age": 19,
-      "favcolor": ["Black", "Blue"],
+      "favcolor": ["Black", "White", "Green", "Blue", "White", "Green"],
     },
     {
       "Name": "Yusuf Hamka",
       "Age": 40,
-      "favcolor": ["Red", "Amber"],
+      "favcolor": ["Red", "Amber", "White", "Green"],
     },
     {
       "Name": "Anggita Sofia",
       "Age": 21,
-      "favcolor": ["Black", "Amber"]
+      "favcolor": ["White", "Green", "Black", "Amber"]
     },
   ];
   @override
@@ -36,6 +36,8 @@ class MyApp extends StatelessWidget {
             print("----------");
             print(myfavcolor);
             return Card(
+              margin: EdgeInsets.all(20),
+              color: Colors.blueGrey.withOpacity(0.1),
               child: Column(
                 children: [
                   //row
@@ -51,13 +53,21 @@ class MyApp extends StatelessWidget {
                     ],
                   ),
                   //favcolor
-                  Row(
-                    children: myfavcolor.map((Color) {
-                      return Container(
-                        color: Colors.yellow,
-                        child: Text(Color),
-                      );
-                    }).toList(),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: myfavcolor.map((Color) {
+                        return Container(
+                          color: Colors.yellow,
+                          margin: EdgeInsets.symmetric(
+                            vertical: 15,
+                            horizontal: 8,
+                          ),
+                          padding: EdgeInsets.all(10),
+                          child: Text(Color),
+                        );
+                      }).toList(),
+                    ),
                   ),
                 ],
               ),
