@@ -13,17 +13,27 @@ class MyApp extends StatelessWidget {
           title: Text("Dynamic Apps"),
         ),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text("1"),
+            Text(
+              "1",
+              style: TextStyle(
+              fontSize: 20,
+            ),
+            ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 RaisedButton(
-                  onPressed: null,
-                  child: Icon(Icons.add),
+                  onPressed: () {},
+                  child: Icon(Icons.remove),
                 ),
                 RaisedButton(
-                  onPressed: null,
-                  child: Icon(Icons.remove),
+                  onPressed: () {
+                    counter++=
+                    print(counter);
+                  },
+                  child: Icon(Icons.add),
                 ),
               ],
             ),
