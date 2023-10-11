@@ -23,16 +23,18 @@ class _MyAppState extends State<MyApp> {
             Text(
               "1",
               style: TextStyle(
-              fontSize: 20,
-            ),
+                fontSize: 50 + double.parse(counter.toString()),
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 RaisedButton(
                   onPressed: () {
-                    if (counter !=1){
-                      counter--;
+                    if (counter != 1) {
+                      setState(() {
+                        counter--;
+                      });
                     }
                     print(counter);
                   },
@@ -40,8 +42,9 @@ class _MyAppState extends State<MyApp> {
                 ),
                 RaisedButton(
                   onPressed: () {
-                    counter++=
-                    print(counter);
+                    setState(() {
+                      counter++;
+                    });
                   },
                   child: Icon(Icons.add),
                 ),
