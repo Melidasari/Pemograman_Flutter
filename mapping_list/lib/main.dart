@@ -31,6 +31,10 @@ class MyApp extends StatelessWidget {
         ),
         body: ListView(
           children: myList.map((data) {
+            print(data["favcolor"]);
+            List myfavcolor = data["favcolor"];
+            print("----------");
+            print(myfavcolor);
             return Card(
               child: Column(
                 children: [
@@ -40,22 +44,20 @@ class MyApp extends StatelessWidget {
                       CircleAvatar(),
                       Column(
                         children: [
-                          Text("Name"),
-                          Text("Age"),
+                          Text("Name: ${data['Name']}"),
+                          Text("Age : ${data['Age']}"),
                         ],
                       ),
                     ],
                   ),
                   //favcolor
                   Row(
-                    children: [
-                      Container(
-                        child: Text("Black"),
-                      ),
-                      Container(
-                        child: Text("Green"),
-                      ),
-                    ],
+                    children: myfavcolor.map((Color) {
+                      return Container(
+                        color: Colors.yellow,
+                        child: Text(Color),
+                      );
+                    }).toList(),
                   ),
                 ],
               ),
