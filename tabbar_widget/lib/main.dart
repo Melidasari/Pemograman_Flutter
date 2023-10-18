@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
+        initialIndex: 2,
         length: myTab.length,
         child: Scaffold(
           appBar: AppBar(
@@ -50,6 +51,28 @@ class MyApp extends StatelessWidget {
                   ),
               tabs: myTab,
             ),
+          ),
+          body: TabBarView(
+            children: [
+              Center(
+                child: Text(
+                  "Isi Tab 1",
+                  style: TextStyle(fontSize: 40),
+                ),
+              ),
+              Center(
+                child: Text(
+                  "Isi Tab 2",
+                  style: TextStyle(fontSize: 40),
+                ),
+              ),
+              Center(
+                child: Text(
+                  "Isi Tab 3",
+                  style: TextStyle(fontSize: 40),
+                ),
+              ),
+            ],
           ),
         ),
       ),
