@@ -11,8 +11,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("MY APPBAR"),
-          centerTitle: true,
+          //leading: Text("My Leading"),
+          leading: Container(
+            color: Colors.brown,
+          ),
+          leadingWidth: 100,
+          //title: Text("MY APPBAR"),
+          title: Container(
+            //width: 35,
+            height: 35,
+            color: Colors.greenAccent,
+          ),
+          //titleSpacing: 0,
+          centerTitle: false,
         ),
       ),
     );
