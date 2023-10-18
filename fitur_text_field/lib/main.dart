@@ -13,7 +13,20 @@ class MyApp extends StatelessWidget {
           title: Text("Fitur Text Field"),
         ),
         body: Center(
-          child: TextField(),
+          child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                children: [
+                  TextField(
+                    autocorrect: false,
+                    autofocus: false,
+                  ),
+                  TextField(
+                    autocorrect: false,
+                    autofocus: true,
+                  ),
+                ],
+              )),
         ),
       ),
     );
