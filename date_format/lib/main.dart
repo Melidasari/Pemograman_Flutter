@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Text(
-            "Tanggal",
+            DateTime(2023, 10, 11, 15, 15).toString(),
             style: TextStyle(),
           ),
         ),
