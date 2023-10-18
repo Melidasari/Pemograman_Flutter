@@ -17,12 +17,15 @@ class MyApp extends StatelessWidget {
               tabs: [
                 Tab(
                   text: "Tab 1",
+                  icon: Icon(Icons.add_a_photo),
                 ),
                 Tab(
                   text: "Tab 2",
+                  icon: Icon(Icons.ac_unit_outlined),
                 ),
                 Tab(
                   text: "Tab 3",
+                  icon: Icon(Icons.add_a_photo),
                 ),
               ],
             ),
