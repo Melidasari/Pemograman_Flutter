@@ -25,14 +25,15 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Grid View"),
         ),
-        body: GridView(
-          padding: EdgeInsets.all(10),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3,
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            childAspectRatio: 4 / 3,
-          ),
+        // body: GridView.count(
+        //   crossAxisCount: 3,
+        //   crossAxisSpacing: 10,
+        //   mainAxisSpacing: 10,
+        //   childAspectRatio: 4 / 3,
+        // padding: EdgeInsets.all(10),
+        // children: myList,
+        body: GridView.count(
+          crossAxisCount: 3,
           children: myList,
         ),
       ),
