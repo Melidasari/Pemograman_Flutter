@@ -5,6 +5,20 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  List<Tab> myTab = [
+    Tab(
+      text: "Tab 1",
+      icon: Icon(Icons.add_a_photo),
+    ),
+    Tab(
+      text: "Tab 2",
+      icon: Icon(Icons.ac_unit_outlined),
+    ),
+    Tab(
+      text: "Tab 3",
+      icon: Icon(Icons.add_a_photo),
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,22 +27,7 @@ class MyApp extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             title: Text("My Apps"),
-            bottom: TabBar(
-              tabs: [
-                Tab(
-                  text: "Tab 1",
-                  icon: Icon(Icons.add_a_photo),
-                ),
-                Tab(
-                  text: "Tab 2",
-                  icon: Icon(Icons.ac_unit_outlined),
-                ),
-                Tab(
-                  text: "Tab 3",
-                  icon: Icon(Icons.add_a_photo),
-                ),
-              ],
-            ),
+            bottom: TabBar(tabs: myTab),
           ),
         ),
       ),
