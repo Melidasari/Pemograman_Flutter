@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Text(
-            DateFormat.yMMMEd().format(DateTime.now()),
+            DateFormat.yMMMEd().add_Hm().format(DateTime.now()),
             //DateFormat.d().format(DateTime.now()),
             //DateFormat.EEEE().format(DateTime.now()),
             //DateTime.now().toString(),
