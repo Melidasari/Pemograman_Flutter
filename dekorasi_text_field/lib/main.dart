@@ -19,13 +19,16 @@ class MyApp extends StatelessWidget {
               autocorrect: false,
               showCursor: true,
               cursorColor: Colors.red,
+              // cursorWidth: 18,
+              // cursorHeight: 25,
+              // cursorRadius: Radius.circular(20),
               textAlign: TextAlign.start,
               textAlignVertical: TextAlignVertical.center,
               textCapitalization: TextCapitalization.none,
               style: TextStyle(
                 color: Colors.red,
-                fontSize: 20,
-              ),
+                fontSize: 28,
+              ), // TextStyle
               decoration: InputDecoration(
                 icon: Icon(
                   Icons.person,
@@ -33,11 +36,23 @@ class MyApp extends StatelessWidget {
                 ),
                 border: OutlineInputBorder(),
                 prefixIcon: Icon(
-                  Icons.person,
+                  Icons.person_add,
                   size: 35,
                 ),
+                // prefixText: "Name: ",
+                // prefix: Icon(
+                //   Icons.person_add,
+                //   size: 35,
+                // ),
+                hintText: "Please input your game..",
+                hintStyle: TextStyle(
+                  color: Colors.red,
+                  fontSize: 28,
+                ), // TextStyle
+                labelText: "Full Name",
               ), // InputDecoration
             ), // TextField
+            // TextField
           ), // Padding
         ), // Center
       ),
