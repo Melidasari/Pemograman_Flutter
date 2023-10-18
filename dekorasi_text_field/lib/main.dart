@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
               autocorrect: false,
               showCursor: true,
               cursorColor: Colors.red,
-              // cursorWidth: 18,
+              // cursorWidth: 10,
               // cursorHeight: 25,
               // cursorRadius: Radius.circular(20),
               textAlign: TextAlign.start,
@@ -27,32 +27,52 @@ class MyApp extends StatelessWidget {
               textCapitalization: TextCapitalization.none,
               style: TextStyle(
                 color: Colors.red,
-                fontSize: 28,
+                fontSize: 20,
               ), // TextStyle
+              obscureText: true,
               decoration: InputDecoration(
+                fillColor: Colors.amber,
+                filled: true,
                 icon: Icon(
                   Icons.person,
                   size: 35,
+                ), // Icon
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.red,
+                  ), // BorderSide
                 ),
-                border: OutlineInputBorder(),
-                prefixIcon: Icon(
-                  Icons.person_add,
-                  size: 35,
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.black,
+                  ), // BorderSide
                 ),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    color: Colors.red,
+                  ), // BorderSide
+                ),
+                prefixIcon: Icon(Icons.add_a_photo),
+                suffixIcon: IconButton(
+                  icon: Icon(Icons.remove_red_eye),
+                  onPressed: () {},
+                ), // IconButton
+                // prefixIcon: Icon(
+                // Icons.person_add,
+                // size: 35,
+                // ),
                 // prefixText: "Name: ",
                 // prefix: Icon(
-                //   Icons.person_add,
-                //   size: 35,
+                // Icons.person_add,
+                // size: 35,
                 // ),
-                hintText: "Please input your game..",
+                hintText: "Please input your name...",
                 hintStyle: TextStyle(
-                  color: Colors.red,
-                  fontSize: 28,
+                  color: Colors.black,
+                  fontSize: 20,
                 ), // TextStyle
-                labelText: "Full Name",
               ), // InputDecoration
             ), // TextField
-            // TextField
           ), // Padding
         ), // Center
       ),
