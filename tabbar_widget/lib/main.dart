@@ -23,11 +23,25 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 3,
+        length: myTab.length,
         child: Scaffold(
           appBar: AppBar(
             title: Text("My Apps"),
-            bottom: TabBar(tabs: myTab),
+            bottom: TabBar(
+              // indicatorColor: Colors.blue ,
+              // indicatorWeight: 5,
+              // indicatorPadding: EdgeInsets.all(10),
+              indicator: BoxDecoration(
+                  color: Colors.cyan,
+                  border: Border(
+                      top: BorderSide(
+                    color: Colors.greenAccent,
+                    width: 5,
+                  ))
+                  // borderRadius: BorderRadius.circular(50),
+                  ),
+              tabs: myTab,
+            ),
           ),
         ),
       ),
