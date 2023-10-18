@@ -46,6 +46,14 @@ class MyApp extends StatelessWidget {
               color: Colors.red,
             ),
           ],
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(200),
+            child: Container(
+              width: 50,
+              height: 200,
+              color: Colors.purpleAccent,
+            ),
+          ),
         ),
       ),
     );
