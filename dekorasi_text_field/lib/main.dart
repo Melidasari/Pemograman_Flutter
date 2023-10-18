@@ -16,17 +16,30 @@ class MyApp extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(20),
             child: TextField(
+              autocorrect: false,
               showCursor: true,
-              cursorColor: Colors.amber,
-              // cursorWidth: 10,
-              // cursorHeight: 25,
-              // cursorRadius: Radius.circular(20),
+              cursorColor: Colors.red,
               textAlign: TextAlign.start,
               textAlignVertical: TextAlignVertical.center,
-              textCapitalization: TextCapitalization.characters,
-            ),
-          ),
-        ),
+              textCapitalization: TextCapitalization.none,
+              style: TextStyle(
+                color: Colors.red,
+                fontSize: 20,
+              ),
+              decoration: InputDecoration(
+                icon: Icon(
+                  Icons.person,
+                  size: 35,
+                ),
+                border: OutlineInputBorder(),
+                prefixIcon: Icon(
+                  Icons.person,
+                  size: 35,
+                ),
+              ), // InputDecoration
+            ), // TextField
+          ), // Padding
+        ), // Center
       ),
     );
   }
