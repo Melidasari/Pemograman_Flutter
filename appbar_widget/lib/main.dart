@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
           leading: Container(
             color: Colors.brown,
           ),
-          leadingWidth: 100,
+          leadingWidth: 50,
           //title: Text("MY APPBAR"),
           title: Container(
             //width: 35,
@@ -24,6 +24,28 @@ class MyApp extends StatelessWidget {
           ),
           //titleSpacing: 0,
           centerTitle: false,
+          actions: [
+            Container(
+              width: 50,
+              //height: 100,
+              color: Colors.deepPurpleAccent,
+            ),
+            Container(
+              width: 50,
+              //height: 100,
+              color: Colors.yellow,
+            ),
+            Container(
+              width: 50,
+              //height: 100,
+              color: Colors.amber,
+            ),
+            Container(
+              width: 50,
+              //height: 100,
+              color: Colors.red,
+            ),
+          ],
         ),
       ),
     );
