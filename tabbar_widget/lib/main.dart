@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
         length: 3,
         child: Scaffold(
           appBar: AppBar(
-            title: Text("My App"),
+            title: Text("My Apps"),
             bottom: TabBar(
               tabs: [
                 Tab(
@@ -26,19 +26,6 @@ class MyApp extends StatelessWidget {
                 ),
               ],
             ),
-          ),
-          body: TabBarView(
-            children: [
-              Center(
-                child: Text("Tab 1"),
-              ),
-              Center(
-                child: Text("Tab 2"),
-              ),
-              Center(
-                child: Text("Tab 3"),
-              ),
-            ],
           ),
         ),
       ),
