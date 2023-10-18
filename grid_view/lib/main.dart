@@ -33,9 +33,14 @@ class MyApp extends StatelessWidget {
         // padding: EdgeInsets.all(10),
         // children: myList,
         body: GridView.count(
+          childAspectRatio: 4 / 3,
+          padding: EdgeInsets.all(10),
           crossAxisCount: 3,
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
           children: myList,
         ),
+        //body: GridView.builder(gridDelegate: null, itemBuilder: null),
       ),
     );
   }
