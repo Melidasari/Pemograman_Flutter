@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   List<Tab> myTab = [
     Tab(
       text: "Tab 1",
-      icon: Icon(Icons.add_a_photo),
+      //icon: Icon(Icons.add_a_photo),
     ),
     Tab(
       text: "Tab 2",
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     ),
     Tab(
       text: "Tab 3",
-      icon: Icon(Icons.add_a_photo),
+      //icon: Icon(Icons.add_a_photo),
     ),
   ];
   @override
@@ -28,6 +28,14 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("My Apps"),
             bottom: TabBar(
+              labelColor: Colors.black,
+              unselectedLabelColor: Colors.lightBlue,
+              labelStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+              unselectedLabelStyle: TextStyle(
+                color: Colors.greenAccent,
+              ),
               // indicatorColor: Colors.blue ,
               // indicatorWeight: 5,
               // indicatorPadding: EdgeInsets.all(10),
