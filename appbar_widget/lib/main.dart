@@ -54,6 +54,12 @@ class MyApp extends StatelessWidget {
               color: Colors.purpleAccent,
             ),
           ),
+          //flexibleSpace: Center(child: Text("FLEXIBLE SPACE")),
+          flexibleSpace: Container(
+            //width: 50,
+            height: 50,
+            color: Colors.greenAccent,
+          ),
         ),
       ),
     );
