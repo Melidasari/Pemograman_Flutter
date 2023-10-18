@@ -14,19 +14,31 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Padding(
-              padding: const EdgeInsets.all(20),
-              child: Column(
-                children: [
-                  TextField(
-                    autocorrect: false,
-                    autofocus: false,
-                  ),
-                  TextField(
-                    autocorrect: false,
-                    autofocus: true,
-                  ),
-                ],
-              )),
+            padding: const EdgeInsets.all(20),
+            child: TextField(
+              autocorrect: false,
+              autofocus: false,
+              enableSuggestions: true,
+              enableInteractiveSelection: false,
+              //enabled: false,
+              // obscureText: true,
+              // obscuringCharacter: '=',
+              keyboardType: TextInputType.phone,
+              readOnly: true,
+            ),
+            // child: Column(
+            // children: [
+            // TextField(
+            // autocorrect: false,
+            // autofocus: false,
+            // ),
+            // TextField(
+            // autocorrect: false,
+            // autofocus: true,
+            //     ),
+            //   ],
+            // )
+          ),
         ),
       ),
     );
