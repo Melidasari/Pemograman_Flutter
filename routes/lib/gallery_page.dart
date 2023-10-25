@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import './gallery_page.dart';
 
-class HomePage extends StatelessWidget {
+class GalleryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home Page"),
+        title: Text("Gallery Page"),
       ),
       body: Center(
         child: Text(
-          "HOME PAGE",
+          "GALLERY PAGE",
           style: TextStyle(
             fontSize: 50,
           ),
