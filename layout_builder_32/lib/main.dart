@@ -31,15 +31,34 @@ class HomePage extends StatelessWidget {
         height: heightBody * 0.3,
         color: Colors.grey,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Container(
-              width: 40,
-              height: 100,
-              color: Colors.amber,
-            ),
+            MyContainer(widthApp, heightBody),
+            MyContainer(widthApp, heightBody),
+            MyContainer(widthApp, heightBody),
           ],
-        ),
-      ),
+        ), // Row
+      ), // Container
+    ); // Scaffold
+  }
+}
+
+class MyContainer extends StatelessWidget {
+  final double widthApp;
+  final double heightApp;
+
+  MyContainer(this.widthApp, this.heightApp);
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return Container(
+          width: widthApp * 0.25,
+          height: constraints.maxHeight * 0.5,
+          color: Colors.amber,
+        ); // Container
+      },
     );
   }
 }
