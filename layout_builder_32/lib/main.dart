@@ -28,14 +28,14 @@ class HomePage extends StatelessWidget {
       appBar: myAppBar,
       body: Container(
         width: widthApp,
-        height: heightBody * 0.3,
+        height: heightBody * 0.9,
         color: Colors.grey,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            MyContainer(widthApp, heightBody),
-            MyContainer(widthApp, heightBody),
-            MyContainer(widthApp, heightBody),
+            MyContainer(widthApp),
+            MyContainer(widthApp),
+            MyContainer(widthApp),
           ],
         ), // Row
       ), // Container
@@ -45,9 +45,7 @@ class HomePage extends StatelessWidget {
 
 class MyContainer extends StatelessWidget {
   final double widthApp;
-  final double heightApp;
-
-  MyContainer(this.widthApp, this.heightApp);
+  MyContainer(this.widthApp);
 
   @override
   Widget build(BuildContext context) {
