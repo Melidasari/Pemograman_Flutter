@@ -27,15 +27,26 @@ class HomePage extends StatelessWidget {
             showDialog(
               context: context,
               builder: (context) {
-                return CupertinoAlertDialog(
-                  title: Text("Alert Dialog"),
+                return AlertDialog(
+                  title: Text("Delete Item"),
+                  content: Text("Are you sure to delete this item?"),
+                  actions: [
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("No"),
+                    ),
+                    TextButton(
+                      onPressed: () {},
+                      child: Text("Yes"),
+                    ),
+                  ],
                 );
               },
             );
           },
           child: Text("Show Alert Dialog"),
-        ), // ElevatedButton
-      ), // Center
-    ); // Scaffold
+        ),
+      ),
+    );
   }
 }
