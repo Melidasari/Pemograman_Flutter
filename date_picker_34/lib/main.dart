@@ -42,10 +42,29 @@ class MyHomePageState extends State<MyHomePage> {
             OutlinedButton(
               onPressed: () {
                 showDatePicker(
-                  context: context,
-                  initialDate: selectDate,
-                  firstDate: DateTime(2000),
-                  lastDate: DateTime(2025),
+                        context: context,
+                        initialDate: selectDate,
+                        firstDate: DateTime(2000),
+                        lastDate: DateTime(2025),
+                        helpText: "Help Text",
+                        cancelText: "Cancel Text",
+                        confirmText: "Confirm Text",
+                        fieldHintText: "Masukkan tanggal lahir Anda",
+                        fieldLabelText: "Field Label Text",
+                        builder: (context, child) {
+                          return Theme(
+                            data: ThemeData.dark(),
+                            child: child!,
+                          );
+                        })!
+                    .then(
+                  (value) {
+                    if (value != null) {
+                      setState(() {
+                        selectDate = value;
+                      });
+                    }
+                  },
                 );
               },
               child: Text("Date Picker"),
