@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
+import 'dart:io';
 
 void main() {
   runApp(MyApp());
@@ -23,32 +24,34 @@ class HomePage extends StatelessWidget {
         title: Text("Cupertino"),
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            if (kIsWeb) {
-              showDatePicker(
-                context: context,
-                initialDate: DateTime.now(),
-                firstDate: DateTime(1999),
-                lastDate: DateTime(2050),
-              );
-            } else {
-              showCupertinoModalPopup(
-                context: context,
-                builder: (context) {
-                  return CupertinoDatePicker(
-                    onDateTimeChanged: (datetime) {
-                      print(datetime);
-                    },
-                    initialDateTime: DateTime.now(),
-                  );
-                },
-              );
-            }
-          },
-          child: Text("Date Picker"),
-        ),
-      ),
+          child: ElevatedButton(
+        onPressed: () {
+          Platform.isAndroid
+              ? showDatePicker(
+                  context: context,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime(1999),
+                  lastDate: DateTime(2050),
+                )
+              : showCupertinoModalPopup(
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      height: MediaQuery.of(context).size.height * 0.4,
+                      color: Colors.white,
+                      child: CupertinoDatePicker(
+                        mode: CupertinoDatePickerMode.time,
+                        onDateTimeChanged: (datetime) {
+                          print(datetime);
+                        },
+                        initialDateTime: DateTime.now(),
+                      ),
+                    );
+                  },
+                );
+        },
+        child: Text("Date Picker"),
+      )),
     );
   }
 }
