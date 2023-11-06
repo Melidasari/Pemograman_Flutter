@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,27 +25,28 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            showDialog(
-              context: context,
-              builder: (context) {
-                return AlertDialog(
-                  title: Text("Delete Item"),
-                  content: Text("Are you sure to delete this item?"),
-                  actions: [
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("No"),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: Text("Yes"),
-                    ),
-                  ],
-                );
-              },
-            );
+            if (kIsWeb) {
+              showDatePicker(
+                context: context,
+                initialDate: DateTime.now(),
+                firstDate: DateTime(1999),
+                lastDate: DateTime(2050),
+              );
+            } else {
+              showCupertinoModalPopup(
+                context: context,
+                builder: (context) {
+                  return CupertinoDatePicker(
+                    onDateTimeChanged: (datetime) {
+                      print(datetime);
+                    },
+                    initialDateTime: DateTime.now(),
+                  );
+                },
+              );
+            }
           },
-          child: Text("Show Alert Dialog"),
+          child: Text("Date Picker"),
         ),
       ),
     );
