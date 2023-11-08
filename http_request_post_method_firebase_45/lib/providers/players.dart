@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import '../models/player.dart';
 
 class Players with ChangeNotifier {
@@ -11,25 +14,39 @@ class Players with ChangeNotifier {
   Player selectById(String id) =>
       _allPlayer.firstWhere((element) => element.id == id);
 
-  void addPlayer(
-      String name, String position, String image, BuildContext context) {
+  Future<void> addPlayer(String name, String position, String image) {
     DateTime datetimeNow = DateTime.now();
-    _allPlayer.add(
-      Player(
-        id: datetimeNow.toString(),
-        name: name,
-        position: position,
-        imageUrl: image,
-        createdAt: datetimeNow,
+
+    Uri url = Uri.parse(
+        "https://http-req-bec2d-default-rtdb.firebaseio.com/players.json");
+    return http
+        .post(
+      url,
+      body: json.encode(
+        {
+          "name": name,
+          "position": position,
+          "imageUrl": image,
+          "createdAt": datetimeNow.toString(),
+        },
       ),
+    )
+        .then(
+      (response) {
+        print("THEN FUNCTION");
+        _allPlayer.add(
+          Player(
+            id: json.decode(response.body)["name"].toString(),
+            name: name,
+            position: position,
+            imageUrl: image,
+            createdAt: datetimeNow,
+          ),
+        );
+
+        notifyListeners();
+      },
     );
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text("Berhasil ditambahkan"),
-        duration: Duration(seconds: 2),
-      ),
-    );
-    notifyListeners();
   }
 
   void editPlayer(String id, String name, String position, String image,

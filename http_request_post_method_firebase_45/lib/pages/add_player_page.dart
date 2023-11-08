@@ -19,13 +19,24 @@ class AddPlayer extends StatelessWidget {
           IconButton(
             icon: Icon(Icons.save),
             onPressed: () {
-              players.addPlayer(
+              players
+                  .addPlayer(
                 nameController.text,
                 positionController.text,
                 imageController.text,
-                context,
+              )
+                  .then(
+                (response) {
+                  print("Kembali ke Home & kasih notif snack bar");
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("Berhasil ditambahkan"),
+                      duration: Duration(seconds: 2),
+                    ),
+                  );
+                  Navigator.pop(context);
+                },
               );
-              Navigator.pop(context);
             },
           ),
         ],
@@ -54,13 +65,24 @@ class AddPlayer extends StatelessWidget {
                 textInputAction: TextInputAction.done,
                 controller: imageController,
                 onEditingComplete: () {
-                  players.addPlayer(
+                  players
+                      .addPlayer(
                     nameController.text,
                     positionController.text,
                     imageController.text,
-                    context,
+                  )
+                      .then(
+                    (response) {
+                      print("Kembali ke Home & kasih notif snack bar");
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text("Berhasil ditambahkan"),
+                          duration: Duration(seconds: 2),
+                        ),
+                      );
+                      Navigator.pop(context);
+                    },
                   );
-                  Navigator.pop(context);
                 },
               ),
               SizedBox(height: 50),
@@ -69,13 +91,24 @@ class AddPlayer extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: OutlinedButton(
                   onPressed: () {
-                    players.addPlayer(
+                    players
+                        .addPlayer(
                       nameController.text,
                       positionController.text,
                       imageController.text,
-                      context,
+                    )
+                        .then(
+                      (response) {
+                        print("Kembali ke Home & kasih notif snack bar");
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text("Berhasil ditambahkan"),
+                            duration: Duration(seconds: 2),
+                          ),
+                        );
+                        Navigator.pop(context);
+                      },
                     );
-                    Navigator.pop(context);
                   },
                   child: Text(
                     "Submit",
