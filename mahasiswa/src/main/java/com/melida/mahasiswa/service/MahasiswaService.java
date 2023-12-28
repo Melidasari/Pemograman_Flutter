@@ -13,23 +13,31 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author LABP2COMDOSEN
+ * @author ASUS
  */
 @Service
 public class MahasiswaService {
     private final MahasiswaRepository mahasiswaRepository;
-
+    
     @Autowired
-    public MahasiswaService(MahasiswaRepository mahasiswaRepository) {
+    public MahasiswaService(MahasiswaRepository mahasiswaRepository){
         this.mahasiswaRepository = mahasiswaRepository;
     }
     
-    public List<Mahasiswa> getAllMahasiswa(){
+    public List<Mahasiswa> getAll(){
         return mahasiswaRepository.findAll();
-    } 
+    }
     
-    public void insertMahasiswa(Mahasiswa mahasiswa){
-        Optional<Mahasiswa> mahasiswaOptional = 
+    public Mahasiswa getMahasiswaById(Long id){
+        return mahasiswaRepository.findById(id).get();
+    }
+    
+    public Mahasiswa getMahasiswa(Long idmahasiswa){
+        return mahasiswaRepository.findById(idmahasiswa).get();
+    }
+    
+    public void insert(Mahasiswa mahasiswa){
+        Optional<Mahasiswa> mahasiswaOptional =
                 mahasiswaRepository.findMahasiswaByEmail(mahasiswa.getEmail());
         if(mahasiswaOptional.isPresent()){
             throw new IllegalStateException("Email sudah ada");

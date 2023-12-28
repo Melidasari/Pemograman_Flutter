@@ -9,6 +9,7 @@ import com.melida.mahasiswa.service.MahasiswaService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,26 +17,34 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author LABP2COMDOSEN
+ * @author ASUS
  */
 @RestController
-@RequestMapping("api/v1/mahasiswa")
+@RequestMapping
+("api/v1/mahasiswa")
 public class MahasiswaController {
-    private final MahasiswaService mahasiswaService;
-
+    
     @Autowired
-    public MahasiswaController(MahasiswaService mahasiswaService) {
-        this.mahasiswaService = mahasiswaService;
-    }
+    private MahasiswaService mahasiswaService;
     
     @GetMapping
-    public List<Mahasiswa> getAllMahasiswa(){
-        return mahasiswaService.getAllMahasiswa();
+    public List<Mahasiswa> getAll(){
+        return mahasiswaService.getAll();
+    }
+    
+    @GetMapping(path= "{id}") 
+    public Mahasiswa getMahasiswaById(@PathVariable("id")Long id){
+        return mahasiswaService.getMahasiswaById(id);
+    }
+    
+    @GetMapping(path = {"id"})
+    public Mahasiswa getMahasiswa(@PathVariable("id")Long id){
+        return mahasiswaService.getMahasiswaById(id);
     }
     
     @PostMapping
-    public void insertMahasiswa(@RequestBody Mahasiswa mahasiswa){
-        mahasiswaService.insertMahasiswa(mahasiswa); 
+    public void insert(@RequestBody Mahasiswa mahasiswa){
+        mahasiswaService.insert(mahasiswa);
     }
     
 }
