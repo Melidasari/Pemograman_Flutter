@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author abdullah adam
+ * @author ASUS
  */
 @Service
 public class MatakuliahService {

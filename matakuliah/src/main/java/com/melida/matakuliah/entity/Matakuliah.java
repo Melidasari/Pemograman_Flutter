@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 
 /**
  *
- * @author abdullahadam
+ * @author ASUS
  */
 @Entity
 @Table

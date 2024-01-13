@@ -2,37 +2,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.melida.mahasiswa.entity;
+package com.melida.nilai.vo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 import java.time.LocalDate;
 
+/**
+ *
+ * @author ASUS
+ */
 
-@Entity
-@Table
 public class Mahasiswa {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nama;
     private String email;
-    private LocalDate tgllahir;
+    private LocalDate tgllahir; 
 
     public Mahasiswa() {
     }
 
     public Mahasiswa(Long id, String nama, String email, LocalDate tgllahir) {
         this.id = id;
-        this.nama = nama;
-        this.email = email;
-        this.tgllahir = tgllahir;
-    }
-    
-    public Mahasiswa( String nama, String email, LocalDate tgllahir) {
         this.nama = nama;
         this.email = email;
         this.tgllahir = tgllahir;
@@ -73,7 +62,5 @@ public class Mahasiswa {
     @Override
     public String toString() {
         return "Mahasiswa{" + "id=" + id + ", nama=" + nama + ", email=" + email + ", tgllahir=" + tgllahir + '}';
-    }
-    
-    
+    } 
 }

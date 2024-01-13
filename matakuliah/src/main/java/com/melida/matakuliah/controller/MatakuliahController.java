@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author abdullahadam
+ * @author ASUS
  */
 @RestController
 @RequestMapping("api/v1/matakuliah")

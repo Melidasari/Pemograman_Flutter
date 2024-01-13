@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author LABP2COMDOSEN
+ * @author ASUS
  */
 @Repository
 public interface MahasiswaRepository extends JpaRepository<Mahasiswa,Long> {
